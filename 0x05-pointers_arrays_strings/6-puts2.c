@@ -1,35 +1,29 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * puts2 - function should print only one character out of two
+ * starting with the first one
+ * @str: input
+ * Return: print
  */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-
-	return (len);
-}
-
-/**
- * puts2 - prints every second character of a string, followed by a new line
- * @str: string to print
- */
-
 void puts2(char *str)
 {
-	int i;
+	int longi = 0;
+	int t = 0;
+	char *y = str;
+	int o;
 
-	for (i = 0; str[i] != '\0' && i < _strlen(str); i += 2)
-		_putchar(str[i]);
-
+	while (*y != '\0')
+	{
+		y++;
+		longi++;
+	}
+	t = longi - 1;
+	for (o = 0 ; o <= t ; o++)
+	{
+	if (o % 2 == 0)
+	{
+		_putchar(str[o]);
+	}
+	}
 	_putchar('\n');
 }
